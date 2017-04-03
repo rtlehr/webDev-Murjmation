@@ -1,0 +1,660 @@
+/*
+	sitePreferences.less
+	Holds all the standard style chioces for the site, colors, fonts
+*/
+/*	Media Querie break points*/
+/*
+/*	Main fonts names
+*/
+/*
+/*	Colors
+*/
+/*
+Generate the "width" in pixels and NO gutter
+
+Used to layout equal columns in a row
+
+.equalColumns(@totalWidth; @columns; @gutter; @float; @counter)
+
+@totalWidth: total width of the row
+@columns: the width of the individual columns, based on the columns set up in @total_columns
+          sample: @columns; 2 (equals 2/@total_columns width)
+@gutter: the margin-right for all the columns (default: 0)
+         the last column will have a margin-right of 0px;
+@float: (boolean) true: adds a float:left, false: no float
+@counter: used for to loop thru the columns (DO NOT CHANGE THE DEFAULT SETTING OF 1)
+
+THE CSS BELOW
+
+This is based on a 12 column area
+@total_columns: 12;  
+
+#content
+{
+
+	background-color: @colorAlt;
+	overflow: hidden;
+	width:@desktopBreak*1px;
+	.equalColumns(1000; 2; 10; @float:left);
+
+}
+
+PRODUCES
+
+#content {
+  background-color: #000000;
+  overflow: hidden;
+  width: 1000px;
+}
+
+#content .column {
+  width: 158.33333333333334px;
+  margin-right: 10px;
+  float: left;
+}
+
+#content .column:last-child {
+  width: 158.33333333333334px;
+  margin-right: 0px;
+  float: left;
+}
+
+*/
+/*
+unequalColumns
+
+Used to layout unequal Cclumns in a row
+
+.unequalColumns(@totalWidth; @columns; @gutter; @float; @counter)
+
+@totalWidth: total width of the row
+@columns: the width of the individual columns, based on the columns set up in @total_columns
+          sample: @columns; 2,6,2 (sets up three columns, the total number should equal the @total_columns number)
+					2 = 2/@total_columns
+					6 = 6/@total_columns
+					2 = 2/@total_columns
+@gutter: the margins for all the columns (default: 5,5,5,5)
+@float: (boolean) true: adds a float:left, false: no float
+@counter: used for to loop thru the columns (DO NOT CHANGE THE DEFAULT SETTING OF 1)
+
+THIS CSS BELOW
+
+This is based on a 12 column area
+@total_columns: 12;  
+
+.content 
+{
+
+	overflow: hidden;
+	width:1000px;
+
+	.unequalColumns(@desktopBreak; 3,6,3; 0,10,0,10; left; true);
+
+}
+
+PRODUCES
+
+.content {
+  overflow: hidden;
+  width: 1000px;
+}
+.content .column:nth-child(1) {
+  float: left;
+  width: 23.5%;
+  margin: 0% 1% 0% 1%;
+}
+.content .column:nth-child(2) {
+  float: left;
+  width: 48.5%;
+  margin: 0% 0.5% 0% 0.5%;
+}
+.content .column:nth-child(3) {
+  float: left;
+  width: 23.5%;
+  margin: 0% 1% 0% 0.5%;
+}
+
+
+*/
+/*
+	common.less
+	Template to use for CSS packages.
+
+	Base LESS information comes from _development/css/libs/sitePreferences.less
+
+	If you need differnt information uncomment the code below
+
+*/
+/*	Media Querie break points */
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links for images, or javascript/internal links
+     */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+.hide {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.handCursor {
+  cursor: pointer;
+}
+.absoluteCenter {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.clearFloat {
+  clear: both;
+}
+.tooltip {
+  font-style: italic;
+  cursor: help;
+}
+/* Mobile layout */
+/* indexOne Mobile CSS */
+#indexOne {
+  position: absolute;
+  top: 770px;
+  left: 0px;
+  width: 1024px;
+  height: 768px;
+  background-color: yellow;
+}
+#test {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 100px;
+}
+/* indexOne Mobile CSS */
+#indexOne {
+  position: absolute;
+  top: 770px;
+  left: 0px;
+  width: 320px;
+  height: 768px;
+  background-color: yellow;
+}
+#test {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: 100px;
+}
+/*
+* This is the total size of the course design
+*/
+#murjmation {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  background-color: purple;
+}
+/*
+* this is the interactive area of the course
+*/
+#screen {
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  background-color: pink;
+  overflow: hidden;
+}
+/*
+* All the pages live inside of the #benchmark <div> this slides around to show the new pages
+*/
+#benchmark {
+  position: relative;
+  width: 0px;
+  height: 0px;
+}
+#progressBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  width: 300px;
+}
+#progressLabel {
+  position: absolute;
+  left: 40%;
+  top: 4px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
+/*
+* This is the total size of the course design
+*/
+#murjmation {
+  position: absolute;
+  width: 320px;
+  height: 768px;
+  background-color: purple;
+}
+/*
+* this is the interactive area of the course
+*/
+#screen {
+  position: absolute;
+  width: 320px;
+  height: 768px;
+  background-color: pink;
+  overflow: hidden;
+}
+/*
+* All the pages live inside of the #benchmark <div> this slides around to show the new pages
+*/
+#benchmark {
+  position: relative;
+  width: 0px;
+  height: 0px;
+}
+#progressBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+  width: 300px;
+}
+#progressLabel {
+  position: absolute;
+  left: 40%;
+  top: 4px;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #fff;
+}
+/* 
+	Min Size 
+	CSS to style the absolute min size of the design
+*/
+/*
+	Tablet layout 
+*/
+@media only screen and (min-width: 48em) {
+  /* indexOne Mobile CSS */
+  #indexOne {
+    position: absolute;
+    top: 770px;
+    left: 0px;
+    width: 1024px;
+    height: 768px;
+    background-color: yellow;
+  }
+  #test {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 100px;
+  }
+  /* indexOne Mobile CSS */
+  #indexOne {
+    position: absolute;
+    top: 770px;
+    left: 0px;
+    width: 1024px;
+    height: 768px;
+    background-color: yellow;
+  }
+  #test {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 100px;
+  }
+  /*
+* This is the total size of the course design
+*/
+  #murjmation {
+    position: absolute;
+    width: 768px;
+    height: 768px;
+    background-color: purple;
+  }
+  /*
+* this is the interactive area of the course
+*/
+  #screen {
+    position: absolute;
+    width: 768px;
+    height: 768px;
+    background-color: pink;
+    overflow: hidden;
+  }
+  /*
+* All the pages live inside of the #benchmark <div> this slides around to show the new pages
+*/
+  #benchmark {
+    position: relative;
+    width: 0px;
+    height: 0px;
+  }
+}
+/*
+	Desktop layout 
+*/
+@media only screen and (min-width: 76.5em) {
+  /* indexOne Mobile CSS */
+  #indexOne {
+    position: absolute;
+    top: 770px;
+    left: 0px;
+    width: 1024px;
+    height: 768px;
+    background-color: orange;
+  }
+  #test {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 100px;
+  }
+  /* indexOne Mobile CSS */
+  #indexOne {
+    position: absolute;
+    top: 770px;
+    left: 0px;
+    width: 1024px;
+    height: 768px;
+    background-color: orange;
+  }
+  #test {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 100px;
+  }
+  /*
+* This is the total size of the course design
+*/
+  #murjmation {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    background-color: purple;
+  }
+  /*
+* this is the interactive area of the course
+*/
+  #screen {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    background-color: pink;
+    overflow: hidden;
+  }
+  /*
+* All the pages live inside of the #benchmark <div> this slides around to show the new pages
+*/
+  #benchmark {
+    position: relative;
+    width: 0px;
+    height: 0px;
+  }
+  /*
+* This is the total size of the course design
+*/
+  #murjmation {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    background-color: purple;
+  }
+  /*
+* this is the interactive area of the course
+*/
+  #screen {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    background-color: pink;
+    overflow: hidden;
+  }
+  /*
+* All the pages live inside of the #benchmark <div> this slides around to show the new pages
+*/
+  #benchmark {
+    position: relative;
+    width: 0px;
+    height: 0px;
+  }
+}
+/* Max Size */

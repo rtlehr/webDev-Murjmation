@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<html class=“no-js” ng-app>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Murjmation</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- Used for jQueryUI (https://jqueryui.com/)-->
+    <link href="assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Murjmation standard CSS -->
+
+    <!-- Application specific CSS -->
+    <link href="assets/css/application.min.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+    <!-- Holds the entire design of the course -->
+    <div id="murjmation" class="absoluteCenter">
+
+        <!-- The "screen" DIV holds the content to the course -->
+        <div id="screen" class="mm-hide">
+
+            <!-- all content gets loaded into "benchmark" IF it's empty -->
+            <div id="benchmark">
+
+                <!-- content loads here -->
+                <div id="indexOne" class="page">
+                    <!-- content starts here -->
+
+                    <div id="test" class="mm-element animin-slideInLeft mm-animateIn">This is a test</div>
+
+                    <!-- content ends here -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- The code below can be removed if a progress bar is not needed -->
+    <div id="progressBar" class="absoluteCenter mm-hide" style="display: none;">
+        <div id=" progressLabel ">Loading...</div>
+    </div>
+
+    <!-- The code below can be removed if a pop-up modal box is not needed -->
+    <div id="dialog ">
+        <!--<p><span class="ui-icon ui-icon-alert " style="float:left; margin:0 7px 20px 0; "></span><span id="dialogText ">-->
+        <!-- CONTENT HERE -->
+        <!--</span>-->
+    </div>
+
+</body>
+
+
+<!-- https://jquery.com/ -->
+<script src="/assets/js/frameworks/jquery.min.js"></script>
+
+<!-- https://jqueryui.com/ -->
+<script src="assets/js/frameworks/jquery-ui.min.js"></script>
+
+<!-- http://jchavannes.com/jquery-timer/demo -->
+<script src="assets/js/jquery.timer.js"></script>
+
+<!-- https://greensock.com/get-started-js -->
+<script src="assets/js/TweenMax.min.js"></script>
+
+<script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+
+<!-- http://buzz.jaysalvat.com/ -->
+<script src="assets/js/frameworks/buzz.js"></script>
+
+<!-- Murjmation JS files -->
+<script src="assets/js/murjmation/Murjmation.js"></script>
+<script src="assets/js/murjmation/Murjmation-setup.js"></script>
+
+<!-- JS files needed for this application -->
+<script src="assets/js/application.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<!--
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
+	-->
+
+</html>

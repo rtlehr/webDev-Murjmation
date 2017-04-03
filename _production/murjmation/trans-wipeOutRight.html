@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html class=“no-js” ng-app>    
+
+    <head>
+    
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Murjmation</title>
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<link href="../assets/css/application.css" rel="stylesheet" type="text/css">
+		<link href="../assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+		
+		<script src="//use.typekit.net/vrc4lcl.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+		
+		<script src="../assets/js/modernizr.js"></script>
+		<script src="../assets/js/frameworks/jquery.min.js"></script>
+		<script src="../assets/js/frameworks/jquery-ui.min.js"></script>
+		<script src="../assets/js/jquery.timer.js"></script>
+		<script src="../assets/js/TweenMax.min.js"></script>
+		<script src="../assets/js/application.js"></script>
+		<script src="../assets/js/murjmation/Murjmation.js"></script>
+		<script src="../assets/js/murjmation/Murjmation-setup.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+		
+		<script>
+		/*
+			function murjmationElementOut()
+			{
+				//console.log("murjmationElementOut called");
+			}
+			
+			function murjmationElementIn()
+			{
+				//console.log("murjmationElementIn called");
+			}
+			
+			function murjmationPageOut()
+			{
+				//console.log("murjmationPageOut called");
+			}
+			
+			function murjmationPageIn()
+			{
+				//console.log("murjmationPageIn called");
+			}
+			*/
+		</script>
+		
+        <style id="pageStyle">
+			
+			#wipeOutRight
+			{
+				position:absolute;
+				top:0px;
+				left:0px;
+			}
+			
+        </style>
+		
+    </head>
+
+    <body>
+
+		<div id="murjmation" class="absoluteCenter">
+			
+			<div id="header"><img src="../assets/images/murjmationTitle.png" width="997" height="80"/></div>
+        
+			<div id="screen">
+
+				<div id="benchmark">
+
+					<!-- content loads here -->
+                    <div id="wipeOutRight" class="page" mm-duration="0">
+                    	
+						
+						
+						<div id="mainTitle" class="pagetitle">
+							
+							wipeOutRight
+							
+						</div>
+						
+						<div id="content" class="maincontent">
+							<pre class="prettyprint">
+							
+&lt;div id="largeIcon" class="mm-element animin-wipeOutRight mm-animateIn"&gt;
+	&lt;img src="assets/images/largeCircleIcon.png" width="407" height="469"/&gt;
+&lt;/div&gt;
+							</pre>
+							
+						</div>
+						
+                        <div id="largeIcon" class="mm-element animin-wipeOutRight mm-animateIn" mm-indelay="0.5">
+                        	<img src="../assets/images/largeCircleIcon.png" width="407" height="469"/>
+                        </div>
+						
+                    	<div id="prevButton" class="mm-prev">
+                        	<img src="../assets/images/buttonPrev.png" width="149" height="142" />
+                        </div>
+                        
+						<div id="replay" class="mm-element" mm-onClickAnimateElement="largeIcon">
+							<img src="../assets/images/buttonReplay.png" width="149" height="142" />
+						</div>
+						
+						<div id="nextButton" class="mm-element animin-fadeIn mm-next mm-animateIn" mm-indelay="2">
+							<img src="../assets/images/buttonNext.png" width="149" height="142" />
+						</div>
+                        
+                    </div>
+
+				</div>
+
+			</div>
+			
+		</div>
+		
+		<!-- The code below can be removed if a progress bar is not needed -->
+		<div id="progressBar" class="absoluteCenter hide"><div id="progressLabel">Loading...</div></div>
+        
+		<!-- The code below can be removed if a pop-up modal box is not needed -->
+        <div id="dialog">
+          <!--<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span id="dialogText">--><!-- CONTENT HERE --><!--</span>-->
+        </div>
+		
+    </body>        
+	
+	<!-- prettyfy any code samples -->
+	<script>
+		
+		prettyPrint(); 
+		
+	</script>
+	
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
+	
+</html>

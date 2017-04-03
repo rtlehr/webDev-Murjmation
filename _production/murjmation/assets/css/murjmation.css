@@ -1,0 +1,729 @@
+/*
+/*	Media Querie break points
+
+just a test
+
+*/
+/*
+/*	LESS libraries
+*/
+/*
+/*	Main fonts names
+*/
+/*
+/*	Colors
+*/
+.color {
+  background-color: #333333;
+}
+/*
+	Load standard CSS tags 
+*/
+.mm-hide {
+  visibility: hidden;
+}
+.mm-show {
+  visibility: visible;
+}
+.handCursor {
+  cursor: pointer;
+}
+.absoluteCenter {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.clearFloat {
+  clear: both;
+}
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links for images, or javascript/internal links
+     */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/*
+	Load Murjmation CSS 
+*/
+/* CSS Document */
+.page {
+  /*Designate a page*/
+}
+.clickable {
+  cursor: pointer;
+}
+.mm-element {
+  /*Designate a page element*/
+}
+.mm-animateIn {
+  /*Animate the element when the page enters the screen*/
+}
+.mm-animateOut {
+  /*Animate the element when the page leaves*/
+}
+.animateElementOnClick {
+  /*animate the element as soon as the user clickes the next button*/
+}
+.mm-continueToNext {
+  /*Continue on to the next page*/
+}
+.mm-elementReset {
+  /*reset the elements when the user leaves the page*/
+}
+.animin-slideInRight {
+  /*slide the element in to the right*/
+}
+.animin-slideInLeft {
+  /*slide the element in to the left*/
+}
+.animin-slideInUp {
+  /*slide the element in in the up direction*/
+}
+.animin-slideInDown {
+  /*slide the element in in the down direction*/
+}
+.animin-slideOutRight {
+  /*slide the element out to the right*/
+}
+.animin-slideOutLeft {
+  /*slide the element out to the left*/
+}
+.animin-slideOutUp {
+  /*slide the element out the up direction*/
+}
+.animin-slideOutDown {
+  /*slide the element out the down direction*/
+}
+.animin-fadeIn {
+  /*fade the element out when the page enters*/
+}
+.animin-fadeOut {
+  /*fade the element in when the page leaves*/
+}
+.animin-wipeInRight {
+  /*wipes the element in from the left to the right*/
+}
+.animin-wipeInLeft {
+  /*wipes the element in from the right to the left*/
+}
+.animin-wipeInDown {
+  /*wipes the element in from the top to bottom*/
+}
+.animin-wipeInUp {
+  /*wipes the element in from the bottom to top*/
+}
+.animin-revealHorz {
+  /*reveals the element from the center out to the right and left*/
+}
+.animin-revealVert {
+  /*reveals the element from the center out to the top and bottom*/
+}
+.animin-wipeOutRight {
+  /*wipes the element out from the left to the right*/
+}
+.animin-wipeOutLeft {
+  /*wipes the element out from the right to the left*/
+}
+.animin-wipeOutDown {
+  /*wipes the element out from the top to bottom*/
+}
+.animin-wipeOutUp {
+  /*wipes the element out from the bottom to top*/
+}
+.animin-concealHorz {
+  /*coneal the element from the center out to the right and left*/
+}
+.animin-concealVert {
+  /*coneal the element from the center out to the top and bottom*/
+}
+.animout-slideInRight {
+  /*slide the element in to the right*/
+}
+.animout-slideInLeft {
+  /*slide the element in to the left*/
+}
+.animout-slideInUp {
+  /*slide the element in in the up direction*/
+}
+.animout-slideInDown {
+  /*slide the element in in the down direction*/
+}
+.animout-slideOutRight {
+  /*slide the element out to the right*/
+}
+.animout-slideOutLeft {
+  /*slide the element out to the left*/
+}
+.animin-slideOutUp {
+  /*slide the element out the up direction*/
+}
+.animout-slideOutDown {
+  /*slide the element out the down direction*/
+}
+.animout-fadeIn {
+  /*fade the element out when the page enters*/
+}
+.animout-fadeOut {
+  /*fade the element in when the page leaves*/
+}
+.animout-wipeInRight {
+  /*wipes the element in from the left to the right*/
+}
+.animout-wipeInLeft {
+  /*wipes the element in from the right to the left*/
+}
+.animout-wipeInDown {
+  /*wipes the element in from the top to bottom*/
+}
+.animout-wipeInUp {
+  /*wipes the element in from the bottom to top*/
+}
+.animout-revealHorz {
+  /*reveals the element from the center out to the right and left*/
+}
+.animout-revealVert {
+  /*reveals the element from the center out to the top and bottom*/
+}
+.animout-wipeOutRight {
+  /*wipes the element out from the left to the right*/
+}
+.animout-wipeOutLeft {
+  /*wipes the element out from the right to the left*/
+}
+.animout-wipeOutDown {
+  /*wipes the element out from the top to bottom*/
+}
+.animout-wipeOutUp {
+  /*wipes the element out from the bottom to top*/
+}
+.animout-concealHorz {
+  /*coneal the element from the center out to the right and left*/
+}
+.animout-concealVert {
+  /*coneal the element from the center out to the top and bottom*/
+}
+/*
+	desktop layout 
+*/
+body {
+  background-color: #333333;
+  font-family: 'Varela', sans-serif;
+  font-weight: 300;
+  line-height: 25px;
+}
+@media only screen and (min-width: 64em) {
+  .mm-next {
+    cursor: pointer;
+  }
+  .mm-prev {
+    cursor: pointer;
+  }
+  .contentRow {
+    position: relative;
+    top: 40px;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 25px;
+    overflow: auto;
+  }
+  .twoCol {
+    position: relative;
+    width: 47%;
+    height: 98%;
+    float: left;
+    margin: 1%;
+    padding-bottom: 25px;
+  }
+  .threeCol {
+    position: relative;
+    width: 31.5%;
+    height: 98%;
+    float: left;
+    margin: .5%;
+    padding-bottom: 25px;
+  }
+  .twoThirdsCol {
+    position: relative;
+    width: 63%;
+    height: 98%;
+    float: left;
+    margin: .5%;
+    padding-bottom: 25px;
+  }
+  .fourCol {
+    position: relative;
+    width: 23.5%;
+    height: 98%;
+    float: left;
+    margin: .5%;
+    padding-bottom: 25px;
+  }
+  .threeFourthsCol {
+    position: relative;
+    width: 70.5%;
+    height: 98%;
+    float: left;
+    margin: .5%;
+    padding-bottom: 25px;
+  }
+  .desktopOnly {
+    display: block;
+  }
+  .tabletOnly {
+    display: none;
+    visibility: hidden;
+  }
+  .mobileOnly {
+    display: none;
+    visibility: hidden;
+  }
+}
+/*
+	Tablet layout 
+*/
+@media screen and (min-width: 0.6875em) and (max-width: 63.9375em) {
+  .note {
+    font-family: 'Varela', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+  }
+  .codeCallout {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    color: orange;
+  }
+  #murjmation {
+    position: absolute;
+    width: 1024px;
+    height: 768px;
+    background-image: url(../images/background.png);
+    overflow: hidden;
+  }
+  #header {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 997px;
+    height: 80px;
+  }
+  #screen {
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    width: 1024px;
+    height: 688px;
+    overflow: hidden;
+  }
+  .page {
+    width: 1024px;
+    height: 688px;
+    overflow: hidden;
+  }
+  #nextButton {
+    position: absolute;
+    width: 149px;
+    height: 142px;
+    top: 547px;
+  }
+  #replay {
+    position: absolute;
+    width: 149px;
+    height: 142px;
+    top: 547px;
+    left: 425px;
+  }
+  #prevButton {
+    position: absolute;
+    width: 149px;
+    height: 142px;
+    top: 547px;
+    left: 877px;
+  }
+  #largeIcon {
+    position: absolute;
+    top: 170px;
+    left: 300px;
+    width: 407px;
+    height: 469px;
+  }
+  #benchmark {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 10px;
+    height: 10px;
+  }
+  .tooltip {
+    color: blue;
+  }
+  #progressBar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 300px;
+  }
+  #progressLabel {
+    position: absolute;
+    left: 40%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  .mainmenu {
+    font-family: 'Varela', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+  }
+  .pagetitle {
+    font-family: 'Varela', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+  }
+  .pagesubtitle {
+    font-family: 'Varela', sans-serif;
+    font-size: 20px;
+    color: #333333;
+  }
+  .maincontent {
+    font-family: 'Varela', sans-serif;
+    font-size: 16px;
+    color: #333333;
+  }
+  #overviewMenu {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    height: 25px;
+    width: 85px;
+  }
+  #setupMenu {
+    position: absolute;
+    top: 15px;
+    left: 125px;
+    height: 25px;
+    width: 60px;
+  }
+  #controlsMenu {
+    position: absolute;
+    top: 15px;
+    left: 210px;
+    height: 25px;
+    width: 78px;
+  }
+  #samplesMenu {
+    position: absolute;
+    top: 15px;
+    left: 313px;
+    height: 25px;
+    width: 75px;
+  }
+  #content {
+    position: absolute;
+    top: 80px;
+    left: 15px;
+    height: 600px;
+    width: 950px;
+  }
+  #mainTitle {
+    position: absolute;
+    top: 55px;
+    left: 15px;
+    height: 29px;
+    width: 1000px;
+  }
+  #iconBlue {
+    position: absolute;
+    top: 125px;
+    left: 0px;
+    width: 97px;
+    height: 112px;
+  }
+  #iconGreen {
+    position: absolute;
+    top: 227px;
+    left: 320px;
+    width: 97px;
+    height: 112px;
+  }
+  #iconRed {
+    position: absolute;
+    top: 329px;
+    left: 640px;
+    width: 97px;
+    height: 112px;
+  }
+  #iconYellow {
+    position: absolute;
+    top: 431px;
+    left: 910px;
+    width: 97px;
+    height: 112px;
+  }
+}
+/*
+	mobile layout 
+*/
+@media screen and (max-width: 0.625em) {
+  .contentRow {
+    position: relative;
+    top: 0px;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 25px;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+  .twoCol,
+  .threeCol,
+  .fourCol,
+  .twoThirdsCol,
+  .threeFourthsCol {
+    position: relative;
+    width: 98%;
+    height: 98%;
+    margin: .5%;
+    padding-bottom: 15px;
+  }
+  .desktopOnly {
+    display: none;
+    visibility: hidden;
+  }
+  .tabletOnly {
+    display: none;
+    visibility: hidden;
+  }
+  .mobileOnly {
+    display: block;
+  }
+}

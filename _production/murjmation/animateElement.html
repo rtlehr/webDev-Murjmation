@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<html class=“no-js” ng-app>    
+
+    <head>
+    
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Murjmation</title>
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+		<!-- prettify.css can be removed if prettify.js is removed -->
+		<link href="../assets/css/prettify.css" rel="stylesheet" type="text/css">
+			
+		<!-- Used for jQueryUI (https://jqueryui.com/)-->
+		<link href="../assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+		
+		<!-- Murjmation standard CSS -->
+		<link href="../assets/css/murjmation.min.css" rel="stylesheet" type="text/css">
+		
+		<!-- Application specific CSS -->
+		<link href="../assets/css/application.min.css" rel="stylesheet" type="text/css">
+				
+		<!-- https://jquery.com/ -->
+		<script src="../assets/js/frameworks/jquery.min.js"></script>
+			
+		<!-- https://jqueryui.com/ -->
+		<script src="../assets/js/frameworks/jquery-ui.min.js"></script>
+			
+		<!-- http://jchavannes.com/jquery-timer/demo -->
+		<script src="../assets/js/jquery.timer.js"></script>
+			
+		<!-- https://greensock.com/get-started-js -->
+		<script src="../assets/js/TweenMax.min.js"></script>
+		
+		<script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+			
+		<!-- http://buzz.jaysalvat.com/ -->
+		<script src="../assets/js/frameworks/buzz.js"></script>
+		
+		<!-- Murjmation JS files -->
+		<script src="../assets/js/murjmation/Murjmation.js"></script>
+		<script src="../assets/js/murjmation/Murjmation-setup.js"></script>
+		 
+			
+		<!-- Optional JS files, can be removed if not using them -->
+		<script src="../assets/js/modernizr.js"></script>
+		<script src="../assets/js/prettify.js"></script>
+			
+		<!-- JS files needed for this application -->
+		<script src="../assets/js/js.development/animateElement.js"></script>
+		
+    </head>
+
+    <body>
+
+		<!-- Holds the entire design of the course -->
+		<div id="murjmation" class="absoluteCenter">
+			
+			<!-- course header -->
+			<div id="header"><img src="../assets/images/murjmationTitle.png" width="997" height="80"/></div>
+			
+			<!-- The "screen" DIV holds the content to the course -->
+			<div id="screen" class="mm-hide">
+
+				<!-- all content gets loaded into "benchmark" IF it's empty -->
+				<div id="benchmark">
+					
+					<!-- content starts here -->
+
+					<div id="animateElement" class="page">
+					
+						
+						<div id="mainTitle" class="pagetitle">
+
+								animateElement(elemName)
+
+							</div>
+
+							<div id="content" class="maincontent animin-fadeIn  animout-fadeOut mm-animateIn mm-animateOut" mm-indelay="0.5">
+
+								Cycles between an elements animin- and animout transition.
+								<p/>
+								<strong>elemName</strong> - ID of the element to animate. Multiple elements can be animated when seperated with a comma ","<br/>
+								<p/>
+								<strong>This HTML file</strong>: <a href="addOnClickSound.html" target="_blank">addOnClickSound.html</a>
+								<p/>
+								The code for this page
+								<pre class="prettyprint">murjmation.animateElement("iconGreenHorz,iconRedHorz,iconYellowHorz");</pre>
+								<strong>Test Directions:</strong>
+								<ol>
+									<li>Click on the blue icon.  The other icons should do there transitions.</li>
+								</ol>
+						
+						</div>
+								
+						<div id="iconBlueHorz" class="mm-element" mm-onClickCallback="animateElement">
+							<img src="../assets/images/iconBlue.png" width="97" height="112" />
+						</div>
+
+						<div id="iconGreenHorz" class="mm-element animin-slideOutUp animout-slideInDown">
+							<img src="../assets/images/iconGreen.png" width="97" height="112" />
+						</div>
+
+						<div id="iconRedHorz" class="mm-element  animin-fadeOut animout-fadeIn">
+							<img src="../assets/images/iconRed.png" width="97" height="112" />
+						</div>
+
+						<div id="iconYellowHorz" class="mm-element animin-wipeOutUp animout-wipeInDown">
+							<img src="../assets/images/iconYellow.png" width="97" height="112" />
+						</div>
+
+						<div id="prevButton" class="animin-fadeIn animout-fadeOut mm-prev mm-animateIn mm-animateOut">
+							<img src="../assets/images/buttonPrev.png" width="149" height="142" />
+						</div>
+<!--
+						<div id="replay" class="animin-fadeIn animout-fadeOut mm-next mm-animateIn mm-animateOut">
+							<img src="assets/images/buttonReplay.png" width="149" height="142" />
+						</div>
+		-->						
+						<div id="nextButton" class="animin-fadeIn animout-fadeOut mm-next mm-animateIn mm-animateOut">
+							<img src="../assets/images/buttonNext.png" width="149" height="142" />
+						</div>
+										
+					<!-- content ends here -->
+					
+				</div>
+
+			</div>
+						
+		</div>
+		
+		<!-- The code below can be removed if a progress bar is not needed -->
+		<div id="progressBar" class="absoluteCenter hide"><div id="progressLabel">Loading...</div></div>
+        
+		<!-- The code below can be removed if a pop-up modal box is not needed -->
+        <div id="dialog">
+          <!--<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><span id="dialogText">--><!-- CONTENT HERE --><!--</span>-->
+        </div>
+		
+    </body>        
+	
+	<!-- prettyfy any code samples -->
+	<script>
+		
+		prettyPrint(); 
+		
+	</script>
+	
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<!--
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
+	-->
+	
+</html>

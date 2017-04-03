@@ -1,0 +1,69 @@
+/*
+	common.less
+	Template to use for CSS packages.
+
+	Base LESS information comes from _development/css/libs/sitePreferences.less
+
+	If you need differnt information uncomment the code below
+
+*/
+
+	/*	Media Querie break points */
+
+	//desktop media querie break
+	//@desktopBreak: 1224; //In pixels
+
+	//tablet media querie break
+	//@tabletBreak: 768; //In pixels
+
+	//mobile media querie break
+	//@mobileBreak: 320; //In pixels
+
+	//Set the total columns you want to break the page into
+	//@total_columns: 12;  
+
+	@import "libs/standard-css.less";
+
+/* Mobile layout */
+
+	@import "module-mediaQueries/mobile.less";
+	
+/* 
+	Min Size 
+	CSS to style the absolute min size of the design
+*/
+
+@media only screen and (max-width: (((@mobileBreak - .001)/@baseFont) * 1em))
+{}
+
+/*
+	Tablet layout 
+*/
+
+@media only screen and (min-width: ((@tabletBreak/@baseFont) * 1em))
+{
+  
+  @import "module-mediaQueries/tablet.less";
+  
+}
+
+
+/*
+	Desktop layout 
+*/
+
+
+@media only screen and (min-width: ((@desktopBreak/@baseFont) * 1em))
+{
+  
+  @import "module-mediaQueries/desktop.less";
+  
+}
+
+/* Max Size */
+
+@media only screen and (min-width: (((@desktopBreak + .001)/@baseFont)*1em))
+{
+
+}
+
