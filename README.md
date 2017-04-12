@@ -17,13 +17,17 @@ This is, by no means, the way **IT SHOULD BE DONE** this is how I work, and only
      - **standard-css.less** - Set of CSS resets and common CSS styles
      - **styleGuide.less** - Set up the site colors, fonts and any other common styles in the site
    - **module-mediaQueries** - There are 3 media breaks, desktop, tablet, mobile
-     - **desktop.less** - CSS for the desktop queries
-     - **mobile.less** - CSS for the mobile queries
-     - **tablet.less** - CSS for the tablet queries
-   - **application.less** - the LESS that uses the files in the module-mediaQueries to create the site CSS (this uses a mobile first philosophy)
+     - **desktop-less** - all the desktop querie LESS files for the site live here.  These get compiled into the *desktop.less* file one dir up.
+     - **mobile-less** - all the mobile querie LESS files for the site live here.  These get compiled into the *mobile.less* file one dir up.
+     - **tablet-less** - all the tablet querie LESS files for the site live here.  These get compiled into the *tablet.less* file one dir up.
+     - **desktop.less** - Holds all the LESS for the desktop queries
+     - **mobile.less** - Holds all the LESS for the mobile queries
+     - **tablet.less** - Holds all the LESS for the tablet queries
+   - **application.less** - the LESS that uses the desktop.less, mobile.less, tablet.less files in the module-mediaQueries to create the site CSS (this uses a mobile first philosophy)
 |
- - **js** - all the JS files in here get combined into a single "application.js" file the site uses
+ - **js** - all the JS files in here get combined into a single "application.js" file the site uses.  This is where all the course function .js should live.
    - **application.js** - the site initial JS class
+ - **Murjmation** - This is the development of the Murjmation framework. These files get compiled into Murjmation.js in *_production/assets/js/murjmation* folder.
 
 #### _production
 - **assets** - All the items needed to display and run the site are stored in here
@@ -38,7 +42,12 @@ This is, by no means, the way **IT SHOULD BE DONE** this is how I work, and only
     - **frameworks** - JS frameworks, such as jQuery, jQuery UI
     - **application.js** - All the JS from *_development/js* are compiled here
     - **application.min.js** - A minified version of application.js
+- **murjmation** - Holds instruction, and sample files
+    - **Murjmation-setup.js** - The setup file for the murjmation course
+    - **Murjmation.js** - The Murjmation framework
+    - **Murjmation.min.js** - Minified version of murjmation.js
 - **index.html** - default page for the site
+- **index.1.html** - test file that get's loaded into index.html
 - **index-uiTheme.html** - jQuery UI theme page 
 
 **.gitignore** - Tells GIT what files to NOT track.  (node_modules do not get tracked)
