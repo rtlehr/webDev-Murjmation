@@ -6,6 +6,8 @@ When I develop a new site/application I like to break things up into understanda
 
 This is, by no means, the way **IT SHOULD BE DONE** this is how I work, and only one of about a million ways to set up a development environment.
 
+This is a brief explantion of setting up a Murjmation site.  For details on how to use the framework, see the Wiki.
+
 ### Structure and explanation 
 
 #### _development
@@ -108,108 +110,4 @@ The page will reload when the *index.html* gets changed.
 
 ```sh
 ctrl + c
-```
-
-## Using webDev-murjmation to create web sites
-
-This explains how to use the site to create other sites.  It assums you have forked, or created your own GIT repository with the environment. 
-
-Be sure you are on the master branch and it is up to date.
-
-```sh
-git checkout master
-```
-
-Create, and checkout, a branch with the site name (siteName = the unique (to this repository) name of the site you are creating)
-
-```sh
-git checkout -b siteName
-```
-
-#### Create a branch for edits to the new site
-
-```sh
-git checkout -b siteName/branchName siteName
-```
-
-#### After edits complete merge the branch into the new site
-
-```sh
-git checkout siteName
-
-git merge --no-ff siteName/branchName
-```
-
-### Edit webDev-murjmation and add those changes to the downstream sites
-If you need to make an edit to the core webDev-murjmation that needs pushed to all the downstream sites
-
-#### Create the edit to the webDev-murjmation
-
-Create, and Checkout the webDev-murjmation branch (NEVER edit on the master branch)
-
-*NOTE:* You only have to create the branch the first time you edit the core.  If the branch already exists, drop the "-b" from the command below.
-
-```sh
-git checkout -b webDev-murjmation
-```
-
-Create, and checkout a subBranch to do the edits
-
-```sh
-git checkout -b webDev-murjmation/branchName webDev-murjmation
-```
-
-After edits are complete, merge the changes into webDev-murjmation branch
-
-```sh
-git checkout webDev-murjmation
- 
-git merge --no-ff webDev-murjmation/branchName
-```
-Delete the subBranch if it is not needed
-
-```sh
-git branch -D webDev-murjmation/branchName 
-```
-
-Merge the webDev-murjmation into the master
-
-```sh
-git checkout master
-
-git merge --no-ff webDev-murjmation
-```
-
-#### Push the edits to the sites
-
-checkout the site and be sure it is up to date
-
-```sh
-git checkout siteName
-```
-
-add the edits from the master to the site
-
-```sh
-git rebase master
-```
-
-#### If a branch in the site needs the rebase
-
-checkout the site and be sure it is up to date
-
-```sh
-git checkout siteName/branchName
-```
-
-add the edits from the master to the site
-
-```sh
-git rebase siteName
-```
-
-push changes to GitHub
-
-```sh
-git push origin
 ```
